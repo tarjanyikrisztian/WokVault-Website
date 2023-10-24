@@ -1,0 +1,74 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo_bg{
+  margin-left: 4em;
+  margin-top: 4em;
+  background-color: #99f1ea;
+  border-radius: 100%;
+  display: block;
+  aspect-ratio: 1/1;
+  width: 175px;
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 300ms;
+  box-shadow: 0.25em 0.25em 0 #00000099;
+}
+
+.logo {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  height: 12em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo_container:hover {
+  transition: filter 300ms;
+  filter: drop-shadow(0 0 3em #74fff3aa);
+}
+
+.logo_container:hover .logo_bg {
+  opacity: 0.5;
+  transition: opacity 300ms;
+}
+
+.logo_container:hover .logo {
+  transition: filter 300ms;
+  filter: invert(100%) ;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+h1{
+  padding-top: 2em;
+}
