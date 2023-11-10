@@ -17,7 +17,7 @@
 .logo_bg{
   margin-left: 4em;
   margin-top: 4em;
-  background-color: #99f1ea;
+  background-color: var(--secondary);
   border-radius: 100%;
   display: block;
   aspect-ratio: 1/1;
@@ -26,7 +26,7 @@
   z-index: 1;
   opacity: 1;
   transition: opacity 300ms;
-  box-shadow: 0.25em 0.25em 0 #00000099;
+  box-shadow: 0.25em 0.25em 0 black;
 }
 
 .logo {
@@ -41,7 +41,7 @@
 
 .logo_container:hover {
   transition: filter 300ms;
-  filter: drop-shadow(0 0 3em #74fff3aa);
+  filter: drop-shadow(0 0 3em var(--secondary));
 }
 
 .logo_container:hover .logo_bg {
@@ -52,21 +52,6 @@
 .logo_container:hover .logo {
   transition: filter 300ms;
   filter: invert(100%) ;
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
 }
 
 h1{
