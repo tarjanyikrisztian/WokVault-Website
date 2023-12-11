@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Sitemap: https://wokvault.tarjanyi.dev/sitemap_index.xml

@@ -1,0 +1,445 @@
+.main {
+    font-family: 'Violet Sans';
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+//hero section
+
+.heroWrap {
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+    height: calc(100dvh - var(--navbar-height));
+    position: relative;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+
+}
+
+//hero text
+
+.heroText {
+    background-color: var(--pink-300);
+    width: 50%;
+    max-width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textWrap {
+    margin: 14%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 100%;
+    height: 100%;
+}
+
+.textTitle {
+    font-size: 4.5rem;
+    margin: 0;
+    padding: 0;
+    line-height: 5rem;
+    font-family: 'Violet Sans';
+    color: var(--black);
+    margin-bottom: 2.25rem;
+}
+
+.textTitleExtra {
+    font-family: 'Lack';
+    font-size: 6.5rem;
+    letter-spacing: 0.4rem;
+}
+
+.textDesc {
+    font-size: 1.75rem;
+    margin: 0;
+    padding: 0;
+    line-height: 2.5rem;
+    color: var(--black);
+    letter-spacing: 0.1rem;
+}
+
+.textDescExtra {
+    font-family: 'Lack';
+    position: relative;
+    cursor: pointer;
+}
+
+.textDescExtra::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.25rem;
+    width: 0%;
+    background-color: var(--black);
+    transition: width 0.2s ease-in-out;
+}
+
+.textDescExtra:hover::after {
+    transition: width 0.2s ease-in-out;
+    width: 100%;
+}
+
+.btn_getStarted {
+    display: block;
+    font-family: 'Lack';
+    font-size: 1.75rem;
+    background-color: var(--black);
+    color: var(--white);
+    border: 2px solid var(--black);
+    border-radius: 0.25rem;
+    width: 50%;
+    padding: 1rem;
+    margin-top: 2.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    transform-style: preserve-3d;
+    text-align: center;
+}
+
+.btn_getStarted::after {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    height: 100%;
+    width: 100%;
+    background-color: var(--blue-400);
+    transition: all 0.2s ease-in-out;
+    transform: translateZ(-1px);
+    outline: 2px solid var(--black);
+    border-radius: 0.25rem;
+}
+
+.btn_getStarted::before {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    height: 100%;
+    width: 100%;
+    background-color: var(--yellow-400);
+    transition: all 0.2s ease-in-out;
+    transform: translateZ(-2px);
+    outline: 2px solid var(--black);
+    border-radius: 0.25rem;
+}
+
+.btn_getStarted:hover::after {
+    transition: all 0.1s ease-in-out;
+    top: 0.5rem;
+    left: 0.5rem;
+    height: 100%;
+    width: 100%;
+}
+
+.btn_getStarted:hover::before {
+    transition: all 0.1s ease-in-out 0.05s;
+    top: 1rem;
+    left: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+//hero image
+
+.heroImage::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 7%;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(to bottom left, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 100%);
+    z-index: 3;
+}
+
+.heroImage {
+    position: relative;
+    background-color: var(--orange-300);
+    width: 50%;
+    border-left: 2px solid var(--black);
+}
+
+.heroLogoBackground {
+    border-radius: 50%;
+    width: 50%;
+    aspect-ratio: 1/1;
+    background: var(--pink-300);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    margin-left: 3rem;
+    margin-top: 3rem;
+    z-index: 1;
+    border: 2px solid var(--black);
+    transition: all 0.2s ease-in-out;
+    scale: 1;
+    animation: heroLogoBackgroundForwards 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes heroLogoBackgroundForwards {
+    0% {
+        box-shadow: none;
+    }
+
+    25% {
+        box-shadow:
+            .5rem .5rem 0 var(--violet-400),
+            .5rem .5rem 0 var(--yellow-400),
+            .5rem .5rem 0 var(--blue-400);
+    }
+
+    50% {
+        box-shadow:
+            .5rem .5rem 0 var(--violet-400),
+            1.1rem 1.1rem 0 var(--yellow-400),
+            1.1rem 1.1rem 0 var(--blue-400);
+    }
+
+    75% {
+        box-shadow:
+            0.5rem 0.5rem 0 var(--violet-400),
+            1.1rem 1.1rem 0 var(--yellow-400),
+            1.7rem 1.7rem 0 var(--blue-400);
+    }
+
+    100% {
+        box-shadow:
+            .5rem .5rem 0 var(--violet-400),
+            1.1rem 1.1rem 0 var(--yellow-400),
+            1.7rem 1.7rem 0 var(--blue-400);
+    }
+}
+
+.heroLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 2;
+    width: 60%;
+}
+
+.heroLogo:hover {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(-50%, -60%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-50%, -61%) rotate(-2deg);
+    }
+
+    50% {
+        transform: translate(-50%, -60%) rotate(1deg);
+    }
+
+    75% {
+        transform: translate(-50%, -59%) rotate(-2deg);
+    }
+
+    100% {
+        transform: translate(-50%, -60%) rotate(0deg);
+    }
+}
+
+
+
+
+//slogan slider
+.sloganSlider {
+    background-color: var(--black);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0.75rem 0;
+    color: transparent;
+}
+
+.sloganWrap {
+    color: var(--white);
+    display: block;
+    text-transform: uppercase;
+    white-space: nowrap;
+    will-change: transform;
+    position: absolute;
+    animation: RightToLeft 6s linear infinite;
+    padding: 0.75rem 0;
+}
+
+@keyframes RightToLeft {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-25%, 0);
+    }
+}
+
+//features section
+
+.horizontalWrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(300dvh + var(--navbar-height));
+    background-color: var(--black);
+}
+
+.horizontalSticky {
+    position: sticky;
+    top: var(--navbar-height);
+    height: calc(100dvh - var(--navbar-height));
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.features {
+    display: inline-flex;
+    flex-direction: row;
+    width: 300dvw;
+    background: var(--orange-300);
+    will-change: transform;
+    border-top: 2px solid var(--black);
+    &:nth-child(2) {
+        transform: translate3d(-200dvw, 0, 0);
+        background: var(--blue-300);
+    }
+    &:nth-child(3) {
+        border-bottom: 2px solid var(--black);
+    }
+    &:nth-child(2)>.feature>.featureImage {
+        background-color: var(--violet-300);
+    }
+}
+
+.feature {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid var(--black);
+    border-left: 1px solid var(--black);
+    
+}
+
+.featureText {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-right: 2px solid var(--black);
+    border-left: 2px solid var(--black);
+    padding: 0 2.5rem;
+}
+.featureText>h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lack';
+    color: var(--black);
+    text-decoration: underline;
+}
+
+.featureText>p {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+    font-family: 'Violet Sans';
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.featureImage {
+    width: 20%;
+    height: 100%;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red-300);
+}
+
+.icon {
+    width: 100%;
+    margin: 0 2.5rem;
+}
+
+.scrollWrap {
+    width: 60px;
+    height: 90px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 10;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    bottom: 10%;
+    left: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.15;
+}
+
+.scrollOutline {
+    width: 100%;
+    height: 90%;
+    border: 3px solid var(--black);
+    border-radius: 15rem;
+    position: relative;
+    opacity: 0.75;
+}
+
+.scrollButton{
+    width: 10px;
+    height: 20px;
+    background-color: var(--black);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 25%;
+    left: 50%;
+    border-radius: 10rem;
+    animation: scrollButton 2s ease-in-out infinite ;
+}
+
+@keyframes scrollButton {
+    0% {
+        top: 25%;
+        opacity: 1;
+    }
+
+    100% {
+        top: 55%;
+        opacity: 0;
+    }
+    
+}

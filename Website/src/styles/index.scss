@@ -1,0 +1,66 @@
+:root {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  scrollbar-color: var(--gray-400) var(--black);
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--black);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--gray-400);
+    border-radius: 10px;
+  }
+  --navbar-height: 5rem;
+  --phone-layout-breakpoint: 990px;
+}
+
+Link, a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Lack Line';
+  src: url(../fonts/Lack-Line.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Lack';
+  src: url(../fonts/Lack.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Violet Sans';
+  src: url(../fonts/VioletSans.otf) format('opentype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  color-scheme: light dark;
+  color: var(--black);
+  background-color: var(--gray-100);
+  font-family: 'Violet Sans';
+  padding-top: var(--navbar-height);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+

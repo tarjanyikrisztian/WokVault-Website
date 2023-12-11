@@ -1,0 +1,258 @@
+footer {
+    color: var(--white);
+    background-color: var(--gray-500);
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: auto;
+    font-family: monospace;
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.logoDescription,
+.link_wrapper {
+    max-width: 20rem;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.logo_name {
+    font-family: 'Lack';
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+}
+
+.description {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.link_wrapper {
+    list-style-type: none;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+.link {
+    font-size: 1rem;
+    color: var(--pink-200);
+    text-decoration: underline;
+    width: 100%;
+    font-weight: 400;
+}
+
+.link:hover {
+    color: var(--pink-400);
+}
+
+.divider {
+    height: 1px;
+    width: 75%;
+    background: var(--gray-400);
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+.newsletter_wrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.newsletter_text,
+.newsletter_form {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    max-width: 20rem;
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 10px;
+}
+
+.newsletter_title{
+    font-family: 'Lack';
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+}
+
+.newsletter_description {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    font-weight: 400;
+
+}
+
+
+.newsletter_form {
+    position: relative;
+    
+}
+
+.newsletter_input {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid var(--white);
+    outline: 0;
+    font-size: 1.3rem;
+    color: var(--white);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    margin-bottom: 1rem;
+    &::placeholder {
+        color: transparent;
+    }
+
+    &:placeholder-shown ~ .newsletter_label {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 20px;
+    }
+}
+
+.newsletter_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: var(--white);
+    left: 0;
+    font-weight: 700;
+}
+
+.newsletter_input:focus {
+    ~ .newsletter_label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: var(--pink-300);
+        left: 0.1rem;
+    }
+
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 2px;
+    border-color: var(--pink-300);
+}
+
+.newsletter_input:valid{
+    ~ .newsletter_label {
+        color: var(--pink-400);
+    }
+    border-color: var(--pink-400);
+}
+
+.newsletter_button {
+    display: block;
+    font-family: 'Lack';
+    font-size: 1.3rem;
+    background-color: var(--white);
+    color: var(--black);
+    border: 2px solid var(--black);
+    border-radius: 0.5rem;
+    width: 50%;
+    margin-top: 0.5rem;
+    padding: 0.75rem 0;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    transform-style: preserve-3d;
+    text-align: center;
+}
+
+.newsletter_button::after {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    height: 100%;
+    width: 100%;
+    background-color: var(--blue-400);
+    transition: all 0.2s ease-in-out;
+    transform: translateZ(-1px);
+    outline: 2px solid var(--black);
+    border-radius: 0.5rem;
+}
+
+.newsletter_button::before {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    height: 100%;
+    width: 100%;
+    background-color: var(--yellow-400);
+    transition: all 0.2s ease-in-out;
+    transform: translateZ(-2px);
+    outline: 2px solid var(--black);
+    border-radius: 0.5rem;
+}
+
+.newsletter_button:hover::after {
+    transition: all 0.1s ease-in-out;
+    top: 0.5rem;
+    left: 0.5rem;
+    height: 100%;
+    width: 100%;
+}
+
+.newsletter_button:hover::before {
+    transition: all 0.1s ease-in-out 0.05s;
+    top: 1rem;
+    left: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+.newsletter_button:hover {
+    background-color: var(--pink-400);
+}

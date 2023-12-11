@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Réteg_2" data-name="Réteg 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+        fill: #000;
+      }
+    </style>
+  </defs>
+  <g id="Réteg_1" data-name="Réteg 1">
+    <path class="cls-1" d="m200,50V0h-100v49.98c-.01-27.61-22.39-49.98-50-49.98H0v100h50C22.39,100,0,122.39,0,150v50h100v-50c0,27.61,22.39,50,50,50h50v-100h-49.98c27.6-.01,49.98-22.39,49.98-50Z"/>
+  </g>
+</svg>

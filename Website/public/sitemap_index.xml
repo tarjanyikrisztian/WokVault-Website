@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://wokvault.tarjanyi.dev/</loc>
+	<lastmod>2023-11-24T15:31:37+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://wokvault.tarjanyi.dev/sign-up</loc>
+	<lastmod>2023-11-24T15:31:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://wokvault.tarjanyi.dev/getting-started</loc>
+	<lastmod>2023-11-24T15:31:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://wokvault.tarjanyi.dev/download</loc>
+	<lastmod>2023-11-24T15:31:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://wokvault.tarjanyi.dev/faq</loc>
+	<lastmod>2023-11-24T15:31:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://wokvault.tarjanyi.dev/documentation</loc>
+	<lastmod>2023-11-24T15:31:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://wokvault.tarjanyi.dev/privacy-policy</loc>
+	<lastmod>2023-11-24T15:31:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://wokvault.tarjanyi.dev/terms-of-service</loc>
+	<lastmod>2023-11-24T15:31:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://wokvault.tarjanyi.dev/feedback</loc>
+	<lastmod>2023-11-24T15:31:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://wokvault.tarjanyi.dev/404</loc>
+	<lastmod>2023-11-24T15:31:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+</urlset>

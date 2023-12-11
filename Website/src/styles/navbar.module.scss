@@ -1,0 +1,191 @@
+/**
+ * SCSS styles for the navbar component.
+ *
+ * FILEPATH: /c:/Users/krisz/OneDrive/Desktop/WokVault/HomePage/Front/src/scss/navbar.scss
+ *
+ * The navbar component is a fixed-positioned bar that appears at the top of the page. It contains the WokVault logo, navigation buttons, and a signup button.
+ * The navigation buttons are styled to have a pink background color that fills up from left to right on hover, and the signup button is styled to have a white background color that fills up from right to left on hover.
+ * The WokVault logo is styled to have an underline that appears from left to right on hover.
+ */
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--navbar-height);
+    outline: 2px solid var(--black);
+    background-color: var(--gray-100);
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: 'Lack';
+    font-size: 1.75rem;
+    z-index: 500;
+}
+
+.navbar__actions, .navbar__button, .navbar__button_text, .navbar__last_button_wrap, .navbar__last_button_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: row;
+    max-height: 100%;
+    
+}
+
+.navbar__last_button_wrap,
+.navbar__button {
+    display: flex;
+    padding: 2.5rem 2rem;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid var(--black);
+    cursor: pointer;
+    position: relative;
+    color: transparent;
+    overflow: hidden;
+    height: 0;
+    
+}
+
+.navbar__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--pink-300);
+    z-index: -4;
+    transition: width 0.2s ease-in-out;
+}
+
+.navbar__button_text,
+.navbar__last_button_text {
+    color: var(--black);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+    gap: 4rem;
+}
+
+.navbar__button:hover::before {
+    transition: width 0.2s ease-in-out;
+    width: 100%;
+}
+
+.navbar__last_button_wrap {
+    background-color: var(--white);
+}
+
+.navbar__last_button_wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--pink-300);
+    z-index: 1;
+    transition: width 0.2s ease-in-out;
+}
+
+.navbar__last_button_text {
+    position: absolute;
+    color: var(--white);
+    background-color: var(--black);
+    mix-blend-mode: multiply;
+    z-index: 2;
+    white-space: nowrap;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    width: 400%;
+
+}
+
+.navbar__last_button_wrap:hover::before {
+    transition: width 0.2s ease-in-out;
+    width: 100%;
+}
+
+.navbar__button:hover .navbar__button_text {
+    animation: RightToLeft 1s infinite linear;
+}
+
+.navbar__last_button_wrap:hover .navbar__last_button_text {
+    animation: RightToLeft_signup 1s infinite linear;
+}
+
+//WokVault name in navbar
+
+.navbar__title {
+    padding: 0 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Lack Line';
+}
+
+.navbar__char {
+    color: var(--black);
+    font-size: 3.5rem;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+[aria-hidden="true"]{
+    font-family: 'Lack';
+}
+
+[aria-hidden="true"]:hover{
+    font-family: 'Lack Line';
+}
+
+[aria-hidden="false"]:hover {
+    font-family: 'Lack';
+}
+
+.navbar__title::after {
+    content: "";
+    position: absolute;
+    bottom: 0.5rem;
+    left: -102%;
+    width: 102%;
+    height: 0.5rem;
+    background-color: var(--black);
+    transition: left 0.2s ease-in-out;
+}
+
+.navbar__title:hover::after {
+    transition: left 0.2s ease-in-out;
+    left: 0%;
+}
+
+@keyframes RightToLeft {
+    0% {
+        transform: translate(50%, -50%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes RightToLeft_signup {
+    0% {
+        transform: translate(0%, -50%);
+    }
+
+    100% {
+        transform: translate(-25%, -50%);
+    }
+}

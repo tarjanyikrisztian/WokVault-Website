@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Réteg_2" data-name="Réteg 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<defs>
+    <style>
+      .cls-1 {;
+        fill: #000;
+      }
+    </style>
+  </defs>
+  <g id="Réteg_1" data-name="Réteg 1">
+    <path class="cls-1" d="m0,0h100c55.23,0,100,44.77,100,100v100h-100C44.77,200,0,155.23,0,100V0Z"/>
+  </g>
+</svg>
