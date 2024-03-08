@@ -11,8 +11,12 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
 
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 .navigation {
     display: flex;
@@ -20,16 +24,29 @@ footer {
     align-items: center;
     flex-direction: row;
     width: 100%;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .logoDescription,
 .link_wrapper {
     max-width: 20rem;
+
+    @media (max-width: 768px) {
+        max-width: none;
+    }
 }
 
 .logo {
     width: 100px;
     height: auto;
+
+    @media (max-width: 768px) {
+        width: 80px;
+    }
 }
 
 .logoContainer {
@@ -38,6 +55,10 @@ footer {
     align-items: center;
     margin: 0;
     padding: 0;
+
+    @media (max-width: 768px) {
+        margin-top: 1rem;
+    }
 }
 
 .logo_name {
@@ -47,11 +68,24 @@ footer {
     padding: 0;
     margin-top: 1.5rem;
     margin-left: 1rem;
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+        margin-top: 1.25rem;
+        margin-left: 0.5rem;
+    }
 }
 
 .description {
     font-size: 1rem;
     margin-left: 1rem;
+
+    @media (max-width: 768px) {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        text-align: center;
+        padding: 0 0.5rem;
+    }
 }
 
 .link_wrapper {
@@ -63,6 +97,14 @@ footer {
     display: flex;
     flex-direction: column;
     font-weight: 700;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
 }
 
 .link {
@@ -71,6 +113,10 @@ footer {
     text-decoration: underline;
     width: 100%;
     font-weight: 400;
+
+    @media (max-width: 768px) {
+        margin: 0 0.5rem;
+    }
 }
 
 .link:hover {
@@ -82,6 +128,10 @@ footer {
     width: 75%;
     background: var(--gray-400);
     margin: 1.5rem 0 0.75rem 0;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 .newsletter_wrap {
@@ -92,8 +142,12 @@ footer {
     margin: 0;
     padding: 0;
     width: 100%;
-}
 
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 .newsletter_text,
 .newsletter_form {
@@ -107,6 +161,10 @@ footer {
     width: 100%;
     padding: 15px 0;
     margin-top: 10px;
+
+    @media (max-width: 768px) {
+        max-width: none;
+    }
 }
 
 .newsletter_title{
@@ -114,6 +172,10 @@ footer {
     font-size: 1.4rem;
     margin: 0;
     padding: 0;
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+    }
 }
 
 .newsletter_description {
@@ -125,8 +187,13 @@ footer {
     padding-left: 1rem;
     font-weight: 400;
 
+    @media (max-width: 768px) {
+        margin-top: 0.5rem;
+        padding-left: 0;
+        text-align: center;
+        padding: 0 0.5rem;
+    }
 }
-
 
 .newsletter_form {
     position: relative;
@@ -145,6 +212,7 @@ footer {
     background: transparent;
     transition: border-color 0.2s;
     margin-bottom: 1rem;
+
     &::placeholder {
         color: transparent;
     }
@@ -153,6 +221,10 @@ footer {
         font-size: 1.3rem;
         cursor: text;
         top: 20px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
     }
 }
 
@@ -165,6 +237,10 @@ footer {
     color: var(--white);
     left: 0;
     font-weight: 700;
+
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+    }
 }
 
 .newsletter_input:focus {
@@ -182,6 +258,10 @@ footer {
     font-weight: 700;
     border-width: 2px;
     border-color: var(--pink-300);
+
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+    }
 }
 
 .newsletter_input:valid{
@@ -207,6 +287,10 @@ footer {
     position: relative;
     transform-style: preserve-3d;
     text-align: center;
+
+    @media (max-width: 768px) {
+        width: 80%;
+    }
 }
 
 .newsletter_button::after {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
 import styles from '../styles/navbar.module.scss';
-import styles_menu from '../styles/navabar_menu.module.scss';
 import { Link } from "react-router-dom";
 
 
@@ -38,29 +37,12 @@ const Navbar = (props: { navbarButtons: string[] }) => {
     }
   }, [])
 
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const menuBtn = document.querySelector(`.${styles_menu.btn}`);
-    const nav = document.querySelector(`.${styles.navbar__menu}`);
-    if (menuOpen) {
-      menuBtn?.classList.remove(styles_menu.notactive);
-      menuBtn?.classList.add(styles_menu.active);
-      nav?.classList.add(styles.navbar__open);
-
-    } else {
-      menuBtn?.classList.remove(styles_menu.active);
-      menuBtn?.classList.add(styles_menu.notactive);
-      nav?.classList.remove(styles.navbar__open);
-    }
-  }, [menuOpen])
-
 
   return (
     <>
-      <nav className={`${styles.navbar}`}>
+      <nav className={styles.navbar}>
         {/* WokVault text*/}
-        <Link to='/' onClick={() => setMenuOpen(false)}>
+        <Link to='/'>
           <h1 className={styles.navbar__title}>
             {[...'WokVault'].map((char, index) => (
               <span
@@ -74,38 +56,42 @@ const Navbar = (props: { navbarButtons: string[] }) => {
             ))}
           </h1>
         </Link>
-        <div className={styles_menu.btn_box} onClick={() => setMenuOpen(!menuOpen)}>
-          <div className={`${styles_menu.btn} ${styles_menu.notactive}`}>
-            <span className={styles_menu.line}></span>
-            <span className={styles_menu.line}></span>
-            <span className={styles_menu.line}></span>
-          </div>
-        </div>
-      </nav>
-      <div className={styles.navbar__menu}>
         {/* Buttons mapped to the input*/}
-        {navbarButtons.map((button, index) => {
-          if (index === navbarButtons.length - 1) {
-            {/* All of the buttons */ }
+        <div className={styles.navbar__actions}>
+          {navbarButtons.map((button, index) => {
+            if (index === navbarButtons.length - 1) {
+              {/* All of the buttons */ }
+              return (
+                <Link to={navbarButtonLinks[index]} key={index}>
+                  <div className={styles.navbar__last_button_wrap}>
+                    {button}
+                    <div className={styles.navbar__last_button_text}>
+                      <span>{button}</span>
+                      <span>{button}</span>
+                      <span>{button}</span>
+                      <span>{button}</span>
+                    </div>
+                  </div>
+                </Link>
+              )
+            }
+            {/* The last button */ }
             return (
-              <Link to={navbarButtonLinks[index]} key={index} className={styles.b} onClick={() => setMenuOpen(false)}>
-                <div className={styles.a}>
+              <Link to={navbarButtonLinks[index]} key={index}>
+                <div className={styles.navbar__button}>
                   {button}
+                  <div className={styles.navbar__button_text}>
+                    <span>{button}</span>
+                    <span>{button}</span>
+                    <span>{button}</span>
+                  </div>
                 </div>
               </Link>
             )
           }
-          {/* The last button */ }
-          return (
-            <Link to={navbarButtonLinks[index]} key={index} className={styles.b} onClick={() => setMenuOpen(false)}>
-              <div className={styles.a}>
-                {button}
-              </div>
-            </Link>
-          )
-        }
-        )}
-      </div>
+          )}
+        </div>
+      </nav>
     </>
   );
 };
